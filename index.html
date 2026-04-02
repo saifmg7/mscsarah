@@ -40,6 +40,21 @@
             transform: scale(1.1) rotate(-5deg);
             color: #b59410;
         }
+        
+        /* حركة شريط الأخبار من اليسار لليمين (لأن الموقع عربي RTL) */
+        @keyframes marqueeRTL {
+            0% { transform: translateX(-100vw); }
+            100% { transform: translateX(100vw); }
+        }
+        .animate-marquee {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marqueeRTL 25s linear infinite;
+        }
+        /* إيقاف الحركة عند وقوف مؤشر الماوس */
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
     </style>
 </head>
 <body class="bg-univ-light text-slate-900 font-sans antialiased">
@@ -79,6 +94,22 @@
             </div>
         </div>
     </nav>
+
+    <!-- شريط آخر الأخبار المتحرك -->
+    <div class="bg-univ-accent text-white border-b-2 border-yellow-700 shadow-inner relative z-40">
+        <div class="max-w-7xl mx-auto px-4 flex items-center h-10">
+            <!-- عنوان الشريط (ثابت) -->
+            <div class="bg-red-600 text-white text-xs md:text-sm font-bold px-4 py-1 rounded-l-lg flex items-center gap-2 z-10 shadow-md h-full">
+                <i class="fas fa-bullhorn animate-pulse"></i> آخر الأخبار
+            </div>
+            <!-- النص المتحرك -->
+            <div class="flex-1 overflow-hidden relative h-full flex items-center mr-2">
+                <a href="#teaching" class="animate-marquee text-sm font-medium hover:text-univ-dark transition">
+                    ✨ عاجل: تمت اضافة ملزمة (Wave Propagation) مؤخراً في قسم المقررات والملازم الدراسية. يمكن للطلاب تحميلها الآن!
+                </a>
+            </div>
+        </div>
+    </div>
 
     <!-- القسم الترحيبي (Hero Section) المطابق للصورة -->
     <section id="hero" class="relative h-[500px] md:h-[600px] w-full overflow-hidden bg-univ-dark">
