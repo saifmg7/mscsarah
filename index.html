@@ -47,20 +47,22 @@
     <!-- الترويسة العلوية البيضاء -->
     <header class="bg-white py-4 relative z-20">
         <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
-            <!-- مساحة فارغة لليسار (يمكن إضافة روابط تواصل هنا مستقبلاً) -->
-            <div></div>
             
-            <!-- الشعار والنص على اليمين -->
+            <!-- الشعار والنص على اليمين (تم التعديل ليظهر في الجانب الأيمن) -->
             <div class="flex items-center gap-5">
+                <!-- الشعار الجديد (اللوغو الشخصي) -->
+                <img src="site-logo.jpg" alt="شعار البوابة" class="w-20 h-20 md:w-28 md:h-28 object-contain" onerror="this.src='https://upload.wikimedia.org/wikipedia/ar/d/d7/Logo_of_Dijlah_University_College.png'">
                 <div class="text-right mt-1">
                     <h1 class="text-2xl md:text-3xl font-bold text-univ-dark tracking-wide mb-1" style="font-family: 'Tajawal', sans-serif;">
                         جَامعَة دِجلَة - كُليَّة الهَندسَة
                     </h1>
                     <p class="text-sm font-semibold text-univ-dark">بوابة الأستاذة سارة صباح الأكاديمية</p>
                 </div>
-                <!-- الشعار -->
-                <img src="https://upload.wikimedia.org/wikipedia/ar/d/d7/Logo_of_Dijlah_University_College.png" alt="جامعة دجلة" class="w-16 h-16 md:w-20 md:h-20 object-contain">
             </div>
+
+            <!-- مساحة فارغة لليسار -->
+            <div></div>
+            
         </div>
     </header>
 
@@ -81,7 +83,6 @@
     <!-- القسم الترحيبي (Hero Section) المطابق للصورة -->
     <section id="hero" class="relative h-[500px] md:h-[600px] w-full overflow-hidden bg-univ-dark">
         <!-- صورة الخلفية (صورتك الشخصية) -->
-        <!-- ملاحظة: bg-gradient-to-l يبدأ من اليمين (داكن) إلى اليسار (شفاف) لإظهار الصورة على اليسار -->
         <img src="profile.jpg" alt="الأستاذة سارة صباح" class="absolute inset-0 w-full h-full object-cover object-top" onerror="this.src='https://via.placeholder.com/1920x800?text=يرجى+إضافة+profile.jpg'">
         
         <!-- التدرج اللوني (Gradient) لجعل النص مقروءاً على اليمين -->
